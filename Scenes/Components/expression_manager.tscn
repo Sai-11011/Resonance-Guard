@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bvr42u6xrwtmn"]
+
+[ext_resource type="Script" uid="uid://bfkaf7ar2fj7r" path="res://Scripts/Components/expression_manager.gd" id="1_p38y4"]
+
+[node name="ExpressionManager" type="Node" unique_id=913509442]
+script = ExtResource("1_p38y4")

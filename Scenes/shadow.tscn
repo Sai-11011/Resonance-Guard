@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c4538q441bw3m"]
+
+[ext_resource type="Texture2D" uid="uid://ce8icyse5x6i3" path="res://Assets/Enemies/DangerArea.png" id="2_rxdv1"]
+[ext_resource type="PackedScene" uid="uid://smqn2lxej57q" path="res://Scenes/Components/squish_component.tscn" id="3_rxdv1"]
+
+[node name="Shadow" type="Node2D" unique_id=1319524232]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=762489611]
+self_modulate = Color(1, 1, 1, 0.19607843)
+texture = ExtResource("2_rxdv1")
+
+[node name="ColorRect" type="ColorRect" parent="Sprite2D" unique_id=1278910431]
+offset_left = -14.614123
+offset_top = -14.818416
+offset_right = 15.3725
+offset_bottom = 15.063252
+color = Color(1, 1, 1, 0.11764706)
+
+[node name="SquishComponent" parent="." unique_id=849541557 node_paths=PackedStringArray("sprite") instance=ExtResource("3_rxdv1")]
+sprite = NodePath("..")
+idle_speed = 10.0

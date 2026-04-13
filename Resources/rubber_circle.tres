@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ShapeData" format=3 uid="uid://cnduuwbkb640h"]
+
+[ext_resource type="Script" uid="uid://hv3dmsk83dxt" path="res://Resources/shape_data.gd" id="1_gmsbx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gmsbx"]
+radius = 13.0
+
+[resource]
+script = ExtResource("1_gmsbx")
+mass = 0.5
+friction = 0.1
+bounciness = 0.8
+frame_index = 2
+collision_shape = SubResource("CircleShape2D_gmsbx")
+metadata/_custom_type_script = "uid://hv3dmsk83dxt"

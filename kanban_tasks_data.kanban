@@ -1,0 +1,802 @@
+{
+	"categories": [
+		{
+			"uuid": "dee0a352-ada5-4acc-ba78-bc0d4e13d5cf",
+			"title": "Player Task",
+			"color": "569eff"
+		},
+		{
+			"uuid": "8f86de56-268b-47ac-84d3-0541f24cedfc",
+			"title": "Audio & Juice",
+			"color": "ea0ab1"
+		},
+		{
+			"uuid": "178d3def-ff34-4da8-a90f-0355b0d4e951",
+			"title": "Physics",
+			"color": "000000"
+		},
+		{
+			"uuid": "1845eea1-056b-401c-af93-d4020f69563c",
+			"title": "System",
+			"color": "b1e61e"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "630f5e35-dda4-49d1-8d88-63817ed853ae",
+			"title": "Backlog",
+			"tasks": [
+				"65abbc45-0e62-42ab-87ed-e58282fd5d92",
+				"5ec002e2-aa01-4679-be3c-e717fd17b398",
+				"b67b0753-e1e0-4dd3-87b9-b44401801d31",
+				"4b3f7b72-775a-4bb6-bccc-6b6705025530",
+				"c8df8bbb-e853-4acf-85e4-cc62600e13ef",
+				"2b371ab5-e448-4f70-8b92-c02096f28e6a",
+				"5f304ec3-93fe-4484-ad15-10c1b893d97e",
+				"5faa8b0e-8105-4e51-9061-5b272f170a81",
+				"89d129b2-286f-45e3-8b36-5fc7f2a9eecc",
+				"ed3fe219-f273-4a9b-95b2-4f35f9edf8ee"
+			]
+		},
+		{
+			"uuid": "71f96255-7049-47da-a907-b8dc3def89d0",
+			"title": "To Do",
+			"tasks": [
+				"68b6c7e0-1e90-462d-ae82-219102c373f6",
+				"52ecd70d-b325-40e0-8188-b4fce6a0ee0a",
+				"f08b8f38-51fb-43a6-b63e-a36cd2643346",
+				"c47d4f0f-6cdd-46da-982c-72bbee629b79"
+			]
+		},
+		{
+			"uuid": "7045440b-cb7f-428c-aa76-96a18265cbdd",
+			"title": "In Progress",
+			"tasks": [
+				"98c30f31-199e-4f3c-ae7a-b10a0014d81f"
+			]
+		},
+		{
+			"uuid": "05972b25-103c-4a6f-9326-ebe828c0b00d",
+			"title": "Done (need to do somthing later)",
+			"tasks": [
+				"dbaa6ac7-7a80-434c-a77e-e833595aafae",
+				"7572d068-afca-4d68-a1c7-ad3e8d781b22"
+			]
+		},
+		{
+			"uuid": "0a47a532-e255-4488-9d05-b239cb472075",
+			"title": "No need to check again",
+			"tasks": [
+				"96e7bffe-77f6-4e76-9da1-63c3ff1f8c99",
+				"f883b2c6-2f73-40ef-81f7-144a2c9f8f2c",
+				"f4dee42f-b862-4b68-9d7c-08b80c3bdeea",
+				"f6067f67-f190-431e-bfa9-bd1c62a1e591",
+				"89c3bb1e-eff4-4282-a63e-1dcdec191bb7",
+				"9610652f-1dc5-43d5-9a74-39fc3287fbda"
+			]
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "96e7bffe-77f6-4e76-9da1-63c3ff1f8c99",
+			"title": "Setup",
+			"description": "",
+			"category": "1845eea1-056b-401c-af93-d4020f69563c",
+			"steps": [
+				{
+					"details": "Create project with 640x360 resolution",
+					"done": true
+				},
+				{
+					"details": "Configure stretch mode (canvas_items)",
+					"done": true
+				},
+				{
+					"details": "Set up input map (WASD + Arrow Keys)",
+					"done": true
+				},
+				{
+					"details": "Create folder structure (Scenes, Scripts, Resources, UI, Audio, Dialogue)",
+					"done": true
+				},
+				{
+					"details": "Enable physics debug visualization",
+					"done": true
+				}
+			]
+		},
+		{
+			"uuid": "f883b2c6-2f73-40ef-81f7-144a2c9f8f2c",
+			"title": "Player",
+			"description": "",
+			"category": "dee0a352-ada5-4acc-ba78-bc0d4e13d5cf",
+			"steps": [
+				{
+					"details": "Create Player.tscn (CharacterBody2D)",
+					"done": true
+				},
+				{
+					"details": "Add CollisionShape2D to Player",
+					"done": true
+				},
+				{
+					"details": "Add Sprite2D placeholder",
+					"done": true
+				},
+				{
+					"details": "Add AnimationPlayer node",
+					"done": true
+				},
+				{
+					"details": "Create SquishComponent.gd",
+					"done": true
+				},
+				{
+					"details": "Create ExpressionManager.gd",
+					"done": true
+				},
+				{
+					"details": "Define player stats variables (speed, strength)",
+					"done": true
+				}
+			]
+		},
+		{
+			"uuid": "f6067f67-f190-431e-bfa9-bd1c62a1e591",
+			"title": "Objects",
+			"description": "",
+			"category": "178d3def-ff34-4da8-a90f-0355b0d4e951",
+			"steps": [
+				{
+					"details": "Create BaseObject.tscn (RigidBody2D)",
+					"done": true
+				},
+				{
+					"details": "Add CollisionShape2D",
+					"done": true
+				},
+				{
+					"details": "Add Sprite2D",
+					"done": true
+				},
+				{
+					"details": "Add AudioStreamPlayer2D",
+					"done": true
+				},
+				{
+					"details": "Create ShapeData.gd",
+					"done": true
+				},
+				{
+					"details": "Create wood.tres",
+					"done": true
+				},
+				{
+					"details": "Create stone.tres",
+					"done": true
+				},
+				{
+					"details": "Create rubber.tres",
+					"done": true
+				}
+			]
+		},
+		{
+			"uuid": "98c30f31-199e-4f3c-ae7a-b10a0014d81f",
+			"title": "Systems",
+			"description": "",
+			"category": "1845eea1-056b-401c-af93-d4020f69563c",
+			"steps": [
+				{
+					"details": "Create SignalBus.gd",
+					"done": false
+				},
+				{
+					"details": "Register SignalBus as Autoload",
+					"done": false
+				},
+				{
+					"details": "Create PressureManager.gd",
+					"done": false
+				},
+				{
+					"details": "Register PressureManager as Autoload",
+					"done": false
+				},
+				{
+					"details": "Create WaveData.gd",
+					"done": false
+				},
+				{
+					"details": "Create basic Spawner script",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "68b6c7e0-1e90-462d-ae82-219102c373f6",
+			"title": "UI",
+			"description": "",
+			"category": "8f86de56-268b-47ac-84d3-0541f24cedfc",
+			"steps": [
+				{
+					"details": "Create UI scene (CanvasLayer)",
+					"done": false
+				},
+				{
+					"details": "Add Pressure Bar node",
+					"done": false
+				},
+				{
+					"details": "Add Push Points label",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "52ecd70d-b325-40e0-8188-b4fce6a0ee0a",
+			"title": "Visual Feedback",
+			"description": "",
+			"category": "8f86de56-268b-47ac-84d3-0541f24cedfc",
+			"steps": [
+				{
+					"details": "Create squish animation reference",
+					"done": false
+				},
+				{
+					"details": "Create particle system for static electricity",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "9610652f-1dc5-43d5-9a74-39fc3287fbda",
+			"title": "Resonate Setup",
+			"description": "",
+			"category": "8f86de56-268b-47ac-84d3-0541f24cedfc",
+			"steps": [
+				{
+					"details": "Install Resonate addon",
+					"done": true
+				},
+				{
+					"details": "Enable addon in project",
+					"done": true
+				}
+			]
+		},
+		{
+			"uuid": "f08b8f38-51fb-43a6-b63e-a36cd2643346",
+			"title": "Audio",
+			"description": "",
+			"category": "8f86de56-268b-47ac-84d3-0541f24cedfc",
+			"steps": [
+				{
+					"details": "Import impact sounds (wood/stone/rubber)",
+					"done": false
+				},
+				{
+					"details": "Import ambient background loop",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "c47d4f0f-6cdd-46da-982c-72bbee629b79",
+			"title": "Dialogue System",
+			"description": "",
+			"category": "8f86de56-268b-47ac-84d3-0541f24cedfc",
+			"steps": [
+				{
+					"details": "Install Dialogue Manager plugin",
+					"done": true
+				},
+				{
+					"details": "Enable plugin in project",
+					"done": true
+				},
+				{
+					"details": "Create Dialogue folder structure",
+					"done": false
+				},
+				{
+					"details": "Create first dialogue resource/file",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "dbaa6ac7-7a80-434c-a77e-e833595aafae",
+			"title": "Setup",
+			"description": "",
+			"category": "1845eea1-056b-401c-af93-d4020f69563c",
+			"steps": [
+				{
+					"details": "Create main scene (Game.tscn)",
+					"done": true
+				},
+				{
+					"details": "Add Camera2D with smoothing",
+					"done": true
+				},
+				{
+					"details": "Create roof boundaries (left/right limits)",
+					"done": true
+				},
+				{
+					"details": "Add background (sky + distant houses)",
+					"done": false
+				},
+				{
+					"details": "Add Roof Area2D (for pressure detection) ",
+					"done": true
+				}
+			]
+		},
+		{
+			"uuid": "f4dee42f-b862-4b68-9d7c-08b80c3bdeea",
+			"title": "Player",
+			"description": "",
+			"category": "dee0a352-ada5-4acc-ba78-bc0d4e13d5cf",
+			"steps": [
+				{
+					"details": "Implement basic input movement",
+					"done": true
+				},
+				{
+					"details": "Implement waddle oscillation (±10° feel)",
+					"done": true
+				},
+				{
+					"details": "Clamp movement inside roof",
+					"done": true
+				},
+				{
+					"details": "Implement SquishComponent tween",
+					"done": true
+				},
+				{
+					"details": "Trigger squish on movement",
+					"done": true
+				},
+				{
+					"details": "Add stunned state logic",
+					"done": true
+				},
+				{
+					"details": "Implement stun timer (1–2 seconds)",
+					"done": true
+				},
+				{
+					"details": "Add player strength check on impact ⭐ (IMPORTANT ADD)",
+					"done": true
+				}
+			]
+		},
+		{
+			"uuid": "7572d068-afca-4d68-a1c7-ad3e8d781b22",
+			"title": "Objects",
+			"description": "",
+			"category": "178d3def-ff34-4da8-a90f-0355b0d4e951",
+			"steps": [
+				{
+					"details": "Apply ShapeData values to RigidBody2D",
+					"done": true
+				},
+				{
+					"details": "Assign physics material dynamically",
+					"done": true
+				},
+				{
+					"details": "Assign textures from ShapeData",
+					"done": true
+				},
+				{
+					"details": "Connect AudioStreamPlayer to ShapeData",
+					"done": false
+				},
+				{
+					"details": "Create object spawn script",
+					"done": true
+				},
+				{
+					"details": "Spawn test Wood object",
+					"done": true
+				},
+				{
+					"details": "Spawn test Stone object",
+					"done": true
+				},
+				{
+					"details": "Spawn test Rubber object",
+					"done": true
+				}
+			]
+		},
+		{
+			"uuid": "89c3bb1e-eff4-4282-a63e-1dcdec191bb7",
+			"title": "Sweeper Mechanic",
+			"description": "",
+			"category": "dee0a352-ada5-4acc-ba78-bc0d4e13d5cf",
+			"steps": [
+				{
+					"details": "Detect collision with RigidBody2D",
+					"done": true
+				},
+				{
+					"details": "Apply X-axis impulse only",
+					"done": true
+				},
+				{
+					"details": "Prevent Y-axis force",
+					"done": true
+				},
+				{
+					"details": "Tune push strength vs mass",
+					"done": true
+				},
+				{
+					"details": "Test pushing Wood",
+					"done": true
+				},
+				{
+					"details": "Test pushing Stone (slow)",
+					"done": true
+				},
+				{
+					"details": "Test pushing Rubber (bounce chaos)",
+					"done": true
+				},
+				{
+					"details": "Verify stable stacking",
+					"done": true
+				}
+			]
+		},
+		{
+			"uuid": "5ec002e2-aa01-4679-be3c-e717fd17b398",
+			"title": "Pressure System",
+			"description": "",
+			"category": "1845eea1-056b-401c-af93-d4020f69563c",
+			"steps": [
+				{
+					"details": "Detect objects entering Roof Area2D",
+					"done": false
+				},
+				{
+					"details": "Detect objects leaving Roof Area2D",
+					"done": false
+				},
+				{
+					"details": "Register/unregister objects in PressureManager",
+					"done": false
+				},
+				{
+					"details": "Calculate base pressure (sum mass)",
+					"done": false
+				},
+				{
+					"details": "Capture object velocity on impact ⭐ (NEW FIX)",
+					"done": false
+				},
+				{
+					"details": "Implement impact spike (mass × velocity)",
+					"done": false
+				},
+				{
+					"details": "Add pressure decay (spike → base) ⭐ (IMPORTANT FIX)",
+					"done": false
+				},
+				{
+					"details": "Combine base + spike pressure",
+					"done": false
+				},
+				{
+					"details": "Clamp pressure to max (50)",
+					"done": false
+				},
+				{
+					"details": "Emit roof_cracked signal",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "b67b0753-e1e0-4dd3-87b9-b44401801d31",
+			"title": "Object Lifecycle",
+			"description": "",
+			"category": "178d3def-ff34-4da8-a90f-0355b0d4e951",
+			"steps": [
+				{
+					"details": "Detect object leaving left boundary",
+					"done": false
+				},
+				{
+					"details": "Detect object leaving right boundary",
+					"done": false
+				},
+				{
+					"details": "Emit shape_cleared signal",
+					"done": false
+				},
+				{
+					"details": "queue_free() object",
+					"done": false
+				},
+				{
+					"details": "Remove object from PressureManager",
+					"done": false
+				},
+				{
+					"details": "Prevent double removal bug ⭐ (NEW SAFETY)",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "4b3f7b72-775a-4bb6-bccc-6b6705025530",
+			"title": "Signals System",
+			"description": "",
+			"category": "1845eea1-056b-401c-af93-d4020f69563c",
+			"steps": [
+				{
+					"details": "Add signal: shape_landed",
+					"done": false
+				},
+				{
+					"details": "Add signal: shape_cleared",
+					"done": false
+				},
+				{
+					"details": "Add signal: roof_cracked",
+					"done": false
+				},
+				{
+					"details": "Emit signal on object landing",
+					"done": false
+				},
+				{
+					"details": "Emit signal on object removal",
+					"done": false
+				},
+				{
+					"details": "Connect signals to UI and Audio systems ⭐ (IMPORTANT ADD)",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "c8df8bbb-e853-4acf-85e4-cc62600e13ef",
+			"title": "Wave System ",
+			"description": "",
+			"category": "1845eea1-056b-401c-af93-d4020f69563c",
+			"steps": [
+				{
+					"details": "Implement wave timer",
+					"done": false
+				},
+				{
+					"details": "Implement spawn rate logic",
+					"done": false
+				},
+				{
+					"details": "Implement spawn probability table",
+					"done": false
+				},
+				{
+					"details": "Spawn using ShapeData references",
+					"done": false
+				},
+				{
+					"details": "Detect wave completion",
+					"done": false
+				},
+				{
+					"details": "Trigger next wave",
+					"done": false
+				},
+				{
+					"details": "Add difficulty scaling (increase stone probability) ⭐",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "2b371ab5-e448-4f70-8b92-c02096f28e6a",
+			"title": "UI",
+			"description": "",
+			"category": "8f86de56-268b-47ac-84d3-0541f24cedfc",
+			"steps": [
+				{
+					"details": "Bind PressureManager to UI",
+					"done": false
+				},
+				{
+					"details": "Update pressure bar in real-time",
+					"done": false
+				},
+				{
+					"details": "Add spike visual effect (quick jump) ",
+					"done": false
+				},
+				{
+					"details": "Add crack state visuals",
+					"done": false
+				},
+				{
+					"details": "Add screen shake on high pressure",
+					"done": false
+				},
+				{
+					"details": "Display Push Points",
+					"done": false
+				},
+				{
+					"details": "Update score on object removal ",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "5f304ec3-93fe-4484-ad15-10c1b893d97e",
+			"title": "Visual Feedback",
+			"description": "",
+			"category": "8f86de56-268b-47ac-84d3-0541f24cedfc",
+			"steps": [
+				{
+					"details": "Spawn squish effect on impact",
+					"done": false
+				},
+				{
+					"details": "Spawn static sparks on collisions",
+					"done": false
+				},
+				{
+					"details": "Add hit flash effect",
+					"done": false
+				},
+				{
+					"details": "Add impact screen shake",
+					"done": false
+				},
+				{
+					"details": "Add stun stars animation",
+					"done": false
+				},
+				{
+					"details": "make objects squishy on impact",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "5faa8b0e-8105-4e51-9061-5b272f170a81",
+			"title": "Resonate",
+			"description": "",
+			"category": "8f86de56-268b-47ac-84d3-0541f24cedfc",
+			"steps": [
+				{
+					"details": "Create SoundBank: Wood",
+					"done": false
+				},
+				{
+					"details": "Create SoundBank: Stone",
+					"done": false
+				},
+				{
+					"details": "Create SoundBank: Rubber",
+					"done": false
+				},
+				{
+					"details": "Assign sounds to each",
+					"done": false
+				},
+				{
+					"details": "Play sound on collision",
+					"done": false
+				},
+				{
+					"details": "Scale pitch/volume with velocity",
+					"done": false
+				},
+				{
+					"details": "Differentiate soft vs hard impacts ⭐ (NEW)",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "89d129b2-286f-45e3-8b36-5fc7f2a9eecc",
+			"title": "Audio",
+			"description": "",
+			"category": "8f86de56-268b-47ac-84d3-0541f24cedfc",
+			"steps": [
+				{
+					"details": "Play landing sounds",
+					"done": false
+				},
+				{
+					"details": "Play sliding sounds",
+					"done": false
+				},
+				{
+					"details": "Add ambient loop",
+					"done": false
+				},
+				{
+					"details": "Add stun sound",
+					"done": false
+				},
+				{
+					"details": "Add pressure warning sound",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "ed3fe219-f273-4a9b-95b2-4f35f9edf8ee",
+			"title": "Dialouge",
+			"description": "",
+			"category": "8f86de56-268b-47ac-84d3-0541f24cedfc",
+			"steps": [
+				{
+					"details": "Create intro dialogue sequence",
+					"done": false
+				},
+				{
+					"details": "Trigger dialogue at game start",
+					"done": false
+				},
+				{
+					"details": "Trigger dialogue between waves ⭐ (SMART PLACEMENT)",
+					"done": false
+				},
+				{
+					"details": "Pause gameplay during dialogue",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "65abbc45-0e62-42ab-87ed-e58282fd5d92",
+			"title": "Save Systems",
+			"description": "",
+			"category": "1845eea1-056b-401c-af93-d4020f69563c",
+			"steps": [
+				{
+					"details": "Implement save_game() logic: (JSON or ConfigFile format) for high scores.",
+					"done": false
+				},
+				{
+					"details": "Implement load_game() logic: Triggered at game launch",
+					"done": false
+				},
+				{
+					"details": "Connect shape_cleared signal to DataManager: To increment score.",
+					"done": false
+				},
+				{
+					"details": "Connect DataManager to UI: To display the persistent high score.",
+					"done": false
+				}
+			]
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"630f5e35-dda4-49d1-8d88-63817ed853ae"
+			],
+			[
+				"71f96255-7049-47da-a907-b8dc3def89d0"
+			],
+			[
+				"7045440b-cb7f-428c-aa76-96a18265cbdd"
+			],
+			[
+				"05972b25-103c-4a6f-9326-ebe828c0b00d",
+				"0a47a532-e255-4488-9d05-b239cb472075"
+			]
+		]
+	}
+}

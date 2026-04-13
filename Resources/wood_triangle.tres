@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ShapeData" format=3 uid="uid://cwu8hm6dnex5k"]
+
+[ext_resource type="Script" uid="uid://hv3dmsk83dxt" path="res://Resources/shape_data.gd" id="1_1yr0s"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_873kn"]
+points = PackedVector2Array(13, 13, 0, -13, -13, 13)
+
+[resource]
+script = ExtResource("1_1yr0s")
+mass = 1.5
+bounciness = 0.2
+frame_index = 7
+collision_shape = SubResource("ConvexPolygonShape2D_873kn")
+metadata/_custom_type_script = "uid://hv3dmsk83dxt"

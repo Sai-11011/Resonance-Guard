@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://ud0wwk33ore1"]
+
+[ext_resource type="Script" uid="uid://dxtlrg843olwi" path="res://Scripts/base_object.gd" id="1_b6aay"]
+[ext_resource type="Resource" uid="uid://cnduuwbkb640h" path="res://Resources/rubber_circle.tres" id="2_3k28e"]
+[ext_resource type="Texture2D" uid="uid://djsscn1w8nuf1" path="res://Assets/Enemies/Village Defender Enemies.png" id="3_4jl35"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_t2776"]
+points = PackedVector2Array(5.5, 12.5, 12.5, 5.5, 12.5, -5.5, 5.5, -12.5, -5.5, -12.5, -12.5, -5.5, -12.5, 5.5, -5.5, 12.5, 5.5, 12.5)
+
+[node name="BaseObject" type="RigidBody2D" unique_id=1682156003]
+collision_layer = 2
+collision_mask = 11
+can_sleep = false
+linear_damp = 3.0
+angular_damp_mode = 1
+angular_damp = 3.0
+script = ExtResource("1_b6aay")
+data = ExtResource("2_3k28e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=428932720]
+shape = SubResource("ConvexPolygonShape2D_t2776")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1107978294]
+texture = ExtResource("3_4jl35")
+hframes = 3
+vframes = 3
+frame = 3
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=721927028]

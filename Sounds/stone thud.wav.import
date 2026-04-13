@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://3xgr82s8f4ac"
+path="res://.godot/imported/stone thud.wav-4354fd8061fbff82700cda91f6b2fae0.sample"
+
+[deps]
+
+source_file="res://Sounds/stone thud.wav"
+dest_files=["res://.godot/imported/stone thud.wav-4354fd8061fbff82700cda91f6b2fae0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

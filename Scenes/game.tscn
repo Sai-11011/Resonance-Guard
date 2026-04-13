@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://bnw7dyt5ipi6g"]
+
+[ext_resource type="Script" uid="uid://csg4u0ci4c7mn" path="res://Scripts/game.gd" id="1_1phco"]
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_qxrlw"]
+[ext_resource type="Texture2D" uid="uid://4kfllsryncrb" path="res://Assets/Background & map/roof.png" id="2_3dryh"]
+[ext_resource type="PackedScene" uid="uid://ddbg2nu2sgakk" path="res://Scenes/player.tscn" id="3_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://lvarnubhmihd" path="res://Scenes/object_spawner.tscn" id="14_nb51f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3dryh"]
+size = Vector2(24, 250)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wowpa"]
+size = Vector2(24, 250)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6g32"]
+size = Vector2(600, 24)
+
+[sub_resource type="Gradient" id="Gradient_qxrlw"]
+offsets = PackedFloat32Array(0.26415095, 1)
+colors = PackedColorArray(0, 1, 1, 1, 0, 0.4509804, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wrm1d"]
+gradient = SubResource("Gradient_qxrlw")
+fill_from = Vector2(1, 0.9941176)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxrlw"]
+size = Vector2(600, 194)
+
+[node name="Game" type="Node2D" unique_id=1847526019]
+script = ExtResource("1_1phco")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1144126644]
+physics_interpolation_mode = 1
+top_level = true
+position = Vector2(100, -40)
+
+[node name="PhantomCameraHost" type="Node" parent="Camera2D" unique_id=1997678216]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("1_qxrlw")
+metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1684539429]
+texture = ExtResource("2_3dryh")
+
+[node name="ColorRect" type="ColorRect" parent="Sprite2D" unique_id=66494502]
+offset_left = -300.0
+offset_top = 180.0
+offset_right = 300.0
+offset_bottom = 480.0
+color = Color(0.2159017, 0.21590173, 0.21590167, 1)
+
+[node name="Boundaries" type="StaticBody2D" parent="." unique_id=1566725364]
+collision_layer = 4
+
+[node name="left" type="CollisionShape2D" parent="Boundaries" unique_id=402901715]
+position = Vector2(-310, 75)
+shape = SubResource("RectangleShape2D_3dryh")
+
+[node name="right" type="CollisionShape2D" parent="Boundaries" unique_id=1942302171]
+position = Vector2(310, 75)
+shape = SubResource("RectangleShape2D_wowpa")
+
+[node name="top" type="CollisionShape2D" parent="Boundaries" unique_id=2021419407]
+position = Vector2(0, -60)
+shape = SubResource("RectangleShape2D_i6g32")
+
+[node name="Bottom" type="CollisionShape2D" parent="Boundaries" unique_id=1276404940]
+position = Vector2(0, 183)
+shape = SubResource("RectangleShape2D_i6g32")
+
+[node name="SkyLayer" type="CanvasLayer" parent="." unique_id=1162216926]
+layer = -100
+
+[node name="TextureRect" type="TextureRect" parent="SkyLayer" unique_id=1984544879]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_wrm1d")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=431165950]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1897635334]
+position = Vector2(0, 70)
+shape = SubResource("RectangleShape2D_qxrlw")
+
+[node name="Player" parent="." unique_id=1933520098 instance=ExtResource("3_wrm1d")]
+position = Vector2(100, -40)
+
+[node name="enemySpawner" type="Node2D" parent="." unique_id=923093490]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=533630861]
+process_mode = 3
+physics_interpolation_mode = 2
+visible = false
+
+[node name="ObjectSpawner" parent="." unique_id=2054020513 node_paths=PackedStringArray("spawner") instance=ExtResource("14_nb51f")]
+spawner = NodePath("../enemySpawner")
+
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
