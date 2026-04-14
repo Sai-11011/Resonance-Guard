@@ -31,6 +31,8 @@ MusicManager="*uid://badhs0in3dbe5"
 PhantomCameraManager="*uid://duq6jhf6unyis"
 Global="*uid://bmc32uvbnssfn"
 PlayerData="*uid://ckdplbjh017v"
+SignalBus="*uid://dkut4rlq2yp8b"
+PressureManager="*uid://dccsvcmlu5h7b"
 
 [display]
 

@@ -6,6 +6,7 @@ var is_stunned: bool = false
 # Components
 @onready var squish_component : Node = $Components/SquishComponent
 @onready var expression_manager : Node = $Components/ExpressionManager
+@onready var push_area : Area2D = $PushArea # ADD THIS BACK!
 
 # Animation
 @onready var anim_player : AnimationPlayer = $AnimationPlayer
@@ -32,11 +33,10 @@ func _physics_process(_delta: float) -> void:
 	# 3. Check if anything just fell on us during that movement
 	check_for_falling_objects()
 	
-	# If the check above just stunned us, stop updating animations for this frame
 	if is_stunned:
 		return
 	
-	# 4. Handle the Waddle Animation natively
+	# 4. Handle the Waddle Animation
 	if direction != Vector2.ZERO:
 		squish_component.is_walking = true
 	else:
@@ -55,13 +55,12 @@ func _physics_process(_delta: float) -> void:
 
 
 func handle_pushing() -> bool:
+	# FIXED: Use the PushArea instead of slide collisions!
+	var touching_bodies = push_area.get_overlapping_bodies()
 	var pushable_objects = []
 	var total_mass: float = 0.0
 	
-	for i in range(get_slide_collision_count()):
-		var collision = get_slide_collision(i)
-		var body = collision.get_collider()
-
+	for body in touching_bodies:
 		if body is BaseObject:
 			pushable_objects.append(body)
 			total_mass += body.mass
@@ -83,31 +82,19 @@ func handle_pushing() -> bool:
 				velocity = velocity.slide(surface_normal)
 		return true
 
-func handle_walking_state() -> void:
-	squish_component.is_walking = true
-	if expression_manager.current_state != expression_manager.State.WALKING:
-		expression_manager.change_state(expression_manager.State.WALKING)
-
-func handle_idle_state() -> void:
-	squish_component.is_walking = false
-	if expression_manager.current_state != expression_manager.State.IDLE:
-		expression_manager.change_state(expression_manager.State.IDLE)
-
 # ==========================================
 # STUN LOGIC
 # ==========================================
 
 func check_for_falling_objects() -> void:
-	# Loop through everything we are touching right now
-	for i in range(get_slide_collision_count()):
-		var collision = get_slide_collision(i)
-		var body = collision.get_collider()
-
-		# If it's an object and it hasn't landed yet, it means it fell onto us
+	# FIXED: Use the PushArea! Slide collision will not detect objects falling exactly on your head.
+	var touching_bodies = push_area.get_overlapping_bodies()
+	
+	for body in touching_bodies:
 		if body is BaseObject and not body.has_landed:
 			body.force_land()
 			apply_stun(1.0, body.mass)
-			break # Stop checking, one hit is enough to trigger the stun
+			break 
 
 func apply_stun(duration: float, object_mass: float) -> void:
 	if object_mass > stats.strength:
@@ -120,13 +107,10 @@ func apply_stun(duration: float, object_mass: float) -> void:
 	is_stunned = true
 	expression_manager.change_state(expression_manager.State.STUNNED)
 	
-	# Stop visual walking effects
 	squish_component.is_walking = false
 	
-	# Wait for the duration
 	await get_tree().create_timer(duration).timeout
 	
-	# Recover if not dead
 	if expression_manager.current_state != expression_manager.State.DEAD:
 		is_stunned = false
 		expression_manager.change_state(expression_manager.State.IDLE)

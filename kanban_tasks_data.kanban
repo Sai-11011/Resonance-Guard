@@ -30,7 +30,6 @@
 				"5ec002e2-aa01-4679-be3c-e717fd17b398",
 				"b67b0753-e1e0-4dd3-87b9-b44401801d31",
 				"4b3f7b72-775a-4bb6-bccc-6b6705025530",
-				"c8df8bbb-e853-4acf-85e4-cc62600e13ef",
 				"2b371ab5-e448-4f70-8b92-c02096f28e6a",
 				"5f304ec3-93fe-4484-ad15-10c1b893d97e",
 				"5faa8b0e-8105-4e51-9061-5b272f170a81",
@@ -52,7 +51,7 @@
 			"uuid": "7045440b-cb7f-428c-aa76-96a18265cbdd",
 			"title": "In Progress",
 			"tasks": [
-				"98c30f31-199e-4f3c-ae7a-b10a0014d81f"
+				"c8df8bbb-e853-4acf-85e4-cc62600e13ef"
 			]
 		},
 		{
@@ -68,6 +67,7 @@
 			"title": "No need to check again",
 			"tasks": [
 				"96e7bffe-77f6-4e76-9da1-63c3ff1f8c99",
+				"98c30f31-199e-4f3c-ae7a-b10a0014d81f",
 				"f883b2c6-2f73-40ef-81f7-144a2c9f8f2c",
 				"f4dee42f-b862-4b68-9d7c-08b80c3bdeea",
 				"f6067f67-f190-431e-bfa9-bd1c62a1e591",
@@ -189,27 +189,27 @@
 			"steps": [
 				{
 					"details": "Create SignalBus.gd",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Register SignalBus as Autoload",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Create PressureManager.gd",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Register PressureManager as Autoload",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Create WaveData.gd",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Create basic Spawner script",
-					"done": false
+					"done": true
 				}
 			]
 		},
@@ -509,11 +509,11 @@
 			"steps": [
 				{
 					"details": "Detect object leaving left boundary",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Detect object leaving right boundary",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Emit shape_cleared signal",

@@ -77,4 +77,5 @@ func force_land() -> void:
 		if is_instance_valid(shado):
 			shado.queue_free()
 
-# i will give its queue free in the main like i have area2d for the roof so i will connect the body exited and gravity scale again to 1 and after screen exiting queue free
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	queue_free()

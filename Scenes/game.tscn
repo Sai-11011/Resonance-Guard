@@ -24,7 +24,7 @@ gradient = SubResource("Gradient_qxrlw")
 fill_from = Vector2(1, 0.9941176)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxrlw"]
-size = Vector2(600, 194)
+size = Vector2(594, 193)
 
 [node name="Game" type="Node2D" unique_id=1847526019]
 script = ExtResource("1_1phco")
@@ -44,6 +44,8 @@ metadata/_custom_type_script = "uid://bd046eokvcnu2"
 texture = ExtResource("2_3dryh")
 
 [node name="ColorRect" type="ColorRect" parent="Sprite2D" unique_id=66494502]
+visible = false
+z_index = -1
 offset_left = -300.0
 offset_top = 180.0
 offset_right = 300.0
@@ -85,7 +87,7 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1897635334]
-position = Vector2(0, 70)
+position = Vector2(0, 70.5)
 shape = SubResource("RectangleShape2D_qxrlw")
 
 [node name="Player" parent="." unique_id=1933520098 instance=ExtResource("3_wrm1d")]
